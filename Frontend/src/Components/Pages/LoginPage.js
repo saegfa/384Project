@@ -1,4 +1,5 @@
 import {Form, Checkbox, Button, Input} from 'antd'
+
 const onFinish = (values) => {
   console.log('Success:', values);
 };
@@ -67,9 +68,11 @@ const LoginPage = () => (
         span: 16,
       }}
     >
+      <a href='./page'>
       <Button type="primary" htmlType="submit">
         Submit
       </Button>
+      </a>
     </Form.Item>
   </Form>
 );
