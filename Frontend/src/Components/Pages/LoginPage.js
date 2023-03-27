@@ -1,4 +1,4 @@
-import {Form, Checkbox, Button, Input} from 'antd'
+import {Form, Checkbox, Button, Input, Card} from 'antd'
 
 const onFinish = (values) => {
   console.log('Success:', values);
@@ -7,6 +7,7 @@ const onFinishFailed = (errorInfo) => {
   console.log('Failed:', errorInfo);
 };
 const LoginPage = () => (
+  <Card style={{width:'800px',margin:'150px 400px 0px'}}>
   <Form
     name="basic"
     labelCol={{
@@ -75,5 +76,6 @@ const LoginPage = () => (
       </a>
     </Form.Item>
   </Form>
+  </Card>
 );
 export default LoginPage;
