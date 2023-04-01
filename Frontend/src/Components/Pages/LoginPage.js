@@ -1,4 +1,5 @@
 import {Form, Checkbox, Button, Input, Card} from 'antd'
+import background from "../../hacettepe-universitesi.jpg"
 
 const onFinish = (values) => {
   console.log('Success:', values);
@@ -7,7 +8,9 @@ const onFinishFailed = (errorInfo) => {
   console.log('Failed:', errorInfo);
 };
 const LoginPage = () => (
-  <Card style={{width:'800px',margin:'150px 400px 0px'}}>
+  <div style={{margin:'0px 0px 0px',height:'100vh',backgroundImage: `url(${background})`}}>
+    <h2 style={{fontSize:'100px',color:'#5e0101',margin:'0vh 75vh 0vh'}}>ICES4HU</h2>
+  <Card style={{width:'800px',margin:'15vh 400px 0px'}}>
   <Form
     name="basic"
     labelCol={{
@@ -77,5 +80,6 @@ const LoginPage = () => (
     </Form.Item>
   </Form>
   </Card>
+  </div>
 );
 export default LoginPage;
