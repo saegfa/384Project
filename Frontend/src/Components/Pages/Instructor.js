@@ -90,8 +90,8 @@ const Instructor = () => {
         </Layout>
       <Watermark content='Hacettepe University'>
         <Space direction='vertical' size='small'>
-          <Button style={{width:'200px',margin:'8px 8px 0px'}} onClick={onClickFormCreator}>Create New Form</Button>
-          <Button style={{width:'200px',margin:'8px 8px 0px'}} onClick={onClickPollCreator}>Create New Poll</Button>
+          <Button style={{width:'200px',margin:'8px 8px 0px',opacity:'1'}} onClick={onClickFormCreator}>Create New Form</Button>
+          <Button style={{width:'200px',margin:'8px 8px 0px',opacity:'1'}} onClick={onClickPollCreator}>Create New Poll</Button>
         </Space>
       </Watermark>
       </Layout>
