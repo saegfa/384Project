@@ -81,7 +81,7 @@ const SignUp = () => (
         </Form.Item>
         <Form.Item
           label="Birth Date"
-          name="password"
+          name="birth"
           rules={[
             {
               required: true,
@@ -98,8 +98,8 @@ const SignUp = () => (
             span: 16,
           }}
         >
-          <a href='./page'>
-            <Button type="primary" htmlType="submit">
+          <a href='/'>
+            <Button>
               Submit
             </Button>
           </a>

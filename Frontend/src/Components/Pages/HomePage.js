@@ -2,8 +2,8 @@ import React from "react";
 import {Button, Card, Space} from 'antd';
 import Student from "../../images/students.png";
 import background from "../../hacettepe-universitesi-CpqE_cover.jpg";
-import Instructor from "../../instructor.avif";
-
+import Instructor from "../../instructor.png";
+import DM from "../../department_manager.png"
 const HomePage = () => {
   return(
     <div>
@@ -17,18 +17,18 @@ const HomePage = () => {
         <Card style={{margin:'15vh 35vh 0px', backgroundColor:'transparent',borderColor:'transparent'}}>
           <Space direction='horizontal' size='middle'>
             <Card style={{height:'175px', width:'175px',opacity:'0.85'}}>
-              <a href='/Student'>
+              <a href='/Login'>
                 <img style={{height:'125px', width:'125px'}} src={Student}/>
               </a>
             </Card>
             <Card style={{margin:'0px 200px 0px',height:'175px', width:'175px',opacity:'0.85'}}>
-            <a href='/Student'>
+            <a href='/Login'>
               <img style={{height:'125px', width:'125px'}} src={Instructor}/>
             </a>
             </Card>
             <Card style={{margin:'0px 0px 0px',height:'175px', width:'175px',opacity:'0.85'}}>
-              <a href='/Student'>
-                <img style={{height:'125px', width:'125px'}} src={Student}/>
+              <a href='/Loginn'>
+                <img style={{height:'125px', width:'125px'}} src={DM}/>
               </a>
             </Card>
           </Space>
