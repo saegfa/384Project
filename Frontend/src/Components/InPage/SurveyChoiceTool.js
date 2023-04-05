@@ -30,7 +30,7 @@ const formItemLayoutWithOutLabel = {
     },
   },
 };
-const FormCreationTool = () => {
+const SurveyChoiceTool = () => {
   const onFinish = (values) => {
     console.log('Received values of form:', values);
   };
@@ -51,7 +51,7 @@ const FormCreationTool = () => {
             {fields.map((field, index) => (
               <Form.Item
                 {...(index === 0 ? formItemLayout : formItemLayoutWithOutLabel)}
-                label={index === 0 ? 'Questions' : ''}
+                label={index === 0 ? 'Choice' : ''}
                 required={false}
                 key={field.key}
               >
@@ -62,13 +62,13 @@ const FormCreationTool = () => {
                     {
                       required: true,
                       whitespace: true,
-                      message: "Please input question or delete this field.",
+                      message: "Please input choice or delete this field.",
                     },
                   ]}
                   noStyle
                 >
                   <Input
-                    placeholder='Question'
+                    placeholder='Choice'
                     style={{
                       width: '60%',
                     }}
@@ -106,4 +106,4 @@ const FormCreationTool = () => {
     </Form>
   );
 };
-export default FormCreationTool;
+export default SurveyChoiceTool;

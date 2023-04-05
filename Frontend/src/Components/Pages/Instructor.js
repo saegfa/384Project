@@ -2,6 +2,7 @@ import { LaptopOutlined, NotificationOutlined, UserOutlined } from '@ant-design/
 import {Button, Layout, Menu, Space, theme, Watermark} from 'antd';
 import React,{useState} from 'react';
 import FormCreationTool from "../InPage/FormCreationTool";
+import SurveyCreator from "../InPage/SurveyCreator";
 const { Header, Content, Sider } = Layout;
 const items1 = ['1', '2', '3'].map((key) => ({
   key,
@@ -25,7 +26,7 @@ const items2 = [UserOutlined, LaptopOutlined, NotificationOutlined].map((icon, i
       const subKey = index * 4 + j + 1;
       return {
         key: subKey,
-        label: `option${subKey}`,
+        label: `Show ${subKey}`,
       };
     }),
   };
@@ -37,7 +38,9 @@ const items2 = [UserOutlined, LaptopOutlined, NotificationOutlined].map((icon, i
 
 const Instructor = () => {
   const [createForm,setCreateForm] = useState(true);
+  const [createSurvey,setCreateSurvey] = useState(true);
   function onClickFormCreator() {
+    setCreateSurvey(true);
     setCreateForm(false);
   }
   const {
@@ -46,6 +49,7 @@ const Instructor = () => {
 
   function onClickPollCreator() {
     setCreateForm(true);
+    setCreateSurvey(false);
   }
 
   return (
@@ -86,6 +90,7 @@ const Instructor = () => {
             }}
           >
             {!createForm && <FormCreationTool/>}
+            {!createSurvey && <SurveyCreator/>}
           </Content>
         </Layout>
       <Watermark content='Hacettepe University'>
