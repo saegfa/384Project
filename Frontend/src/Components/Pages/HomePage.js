@@ -1,9 +1,9 @@
 import React from "react";
 import {Button, Card, Space} from 'antd';
 import Student from "../../images/students.png";
-import background from "../../hacettepe-universitesi-CpqE_cover.jpg";
-import Instructor from "../../instructor.png";
-import DM from "../../department_manager.png"
+import background from "../../images/hacettepe-universitesi-CpqE_cover.jpg";
+import Instructor from "../../images/instructor.png";
+import DM from "../../images/department_manager.png"
 const HomePage = () => {
   return(
     <div>

@@ -3,6 +3,8 @@ import {Button, Layout, Menu, Space, theme, Watermark} from 'antd';
 import React,{useState} from 'react';
 import FormCreationTool from "../InPage/FormCreationTool";
 import SurveyCreator from "../InPage/SurveyCreator";
+import ReSurvey from "../UI/ReSurvey";
+import ResetPassword from "../UI/ResetPassword";
 const { Header, Content, Sider } = Layout;
 const items1 = ['1', '2', '3'].map((key) => ({
   key,
@@ -22,11 +24,17 @@ const items2 = [UserOutlined, LaptopOutlined, NotificationOutlined].map((icon, i
     key: `sub${key}`,
     icon: React.createElement(icon),
     label: `${title}`,
-    children: new Array(4).fill(null).map((_, j) => {
+    children: new Array(2).fill(null).map((_, j) => {
       const subKey = index * 4 + j + 1;
+      let a;
+      if(subKey===1){
+        a='Survey 1';
+      }else if(subKey===2){
+        a='Survey 2';
+      }
       return {
         key: subKey,
-        label: `Show ${subKey}`,
+        label: `${a}`,
       };
     }),
   };
@@ -39,7 +47,11 @@ const items2 = [UserOutlined, LaptopOutlined, NotificationOutlined].map((icon, i
 const Instructor = () => {
   const [createForm,setCreateForm] = useState(true);
   const [createSurvey,setCreateSurvey] = useState(true);
+  const [reSurvey,setReSurvey] = useState(true);
+  const [resetPass,setResetPass] = useState(false);
+
   function onClickFormCreator() {
+    setReSurvey(true);
     setCreateSurvey(true);
     setCreateForm(false);
   }
@@ -48,8 +60,14 @@ const Instructor = () => {
   } = theme.useToken();
 
   function onClickPollCreator() {
+    setReSurvey(true)
     setCreateForm(true);
     setCreateSurvey(false);
+  }
+  function reSurveyed(){
+    setReSurvey(false)
+    setCreateForm(true);
+    setCreateSurvey(true);
   }
 
   return (
@@ -89,6 +107,8 @@ const Instructor = () => {
               background: colorBgContainer,
             }}
           >
+            {!resetPass && <ResetPassword/>}
+            {!reSurvey && <ReSurvey/>}
             {!createForm && <FormCreationTool/>}
             {!createSurvey && <SurveyCreator/>}
           </Content>

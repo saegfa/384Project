@@ -1,5 +1,5 @@
 import {Form, Checkbox, Button, Input, Card} from 'antd'
-import background from "../../hacettepe-universitesi-CpqE_cover.jpg"
+import background from "../../images/hacettepe-universitesi-CpqE_cover.jpg"
 
 const onFinish = (values) => {
   console.log('Success:', values);
